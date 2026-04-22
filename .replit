@@ -1,0 +1,10 @@
+run = "python3 -m http.server 8080"
+hidden = [".config"]
+modules = ["python-3.8:v2-20230907-3d66d11"]
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["python3", "-m", "http.server", "8080"]
+deploymentTarget = "cloudrun"
